@@ -20,6 +20,11 @@ export class Products extends Storage {
         })
     }
 
+    addNewProduct(product: ProductsModel): string{
+        products.push(product);
+        return `Товар ${product.product_name} добвлен в корзину`
+    }
+
     sortProductsByPrice(products: ProductsModel[], cost: TCost): ProductsModel[] {
         return products.sort((a, b) => {
             if(cost === 'возрастание'){

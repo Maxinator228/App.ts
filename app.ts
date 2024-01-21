@@ -6,5 +6,16 @@ const productsStore = new Products();
 
 console.log(productsStore.allStorage);
 
-console.log(productsStore.sortProductsByPrice(products, 'возрастание'));
-console.log(productsStore.sortProductsByPrice(products, 'убывание'));
+
+const newProduct = {
+  product_name: "PlayStation 5",
+  company_name: "Технодом",
+  quantity: 55,
+  unit_cost: 450,
+  delivery_id: 3,
+  warehouse_id: 2,
+};
+
+console.log(productsStore.addNewProduct(newProduct));
+console.log(productsStore.sortProductsByPrice(products, "возрастание"));
+console.log(productsStore.sortProductsByPrice(products, "убывание"));
